@@ -1,0 +1,16 @@
+.totalBlocked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.totalBlocked > h3 {
+  text-align: center;
+}
+
+.totalBlocked > span {
+  font-size: large;
+  font-weight: bold;
+  color: red;
+}
