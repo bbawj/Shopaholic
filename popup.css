@@ -1,14 +1,24 @@
+body {
+  background-color: #ffd4c2;
+}
+
+body > h2 {
+  text-align: center;
+}
+
 .contentBody {
   display: flex;
   margin-bottom: 5%;
+  align-items: center;
 }
 
 .totalBlocked {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid black;
+  /* border: 2px solid grey; */
   margin-right: 5%;
+  padding: 10px;
 }
 
 .totalBlocked > h3 {
@@ -25,8 +35,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid black;
+  /* border: 2px solid grey; */
   margin-right: 5%;
+  padding: 10px;
 }
 
 .totalDays > h3 {
@@ -37,4 +48,9 @@
   font-size: large;
   font-weight: bold;
   color: red;
+}
+
+#shopping {
+  width: 100%;
+  background-color: white;
 }
