@@ -1,6 +1,11 @@
-document.addEventListener("DOMSubtreeModified", getCheckout )
-document.addEventListener("DOMContentLoaded", getCheckout )
 
+//send req to bg for storage value of toggle; if "on" run scripts
+chrome.runtime.sendMessage({toggleReq: "toggle"}, res => {
+    if (res.toggle==="on"){
+        document.addEventListener("DOMSubtreeModified", getCheckout )
+        document.addEventListener("DOMContentLoaded", getCheckout )
+    }
+})
 
 function getCheckout(){
     const replace = document.createElement('div')
