@@ -1,8 +1,14 @@
+.contentBody {
+  display: flex;
+  margin-bottom: 5%;
+}
+
 .totalBlocked {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 2px solid black;
+  margin-right: 5%;
 }
 
 .totalBlocked > h3 {
@@ -10,6 +16,24 @@
 }
 
 .totalBlocked > span {
+  font-size: large;
+  font-weight: bold;
+  color: red;
+}
+
+.totalDays {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  margin-right: 5%;
+}
+
+.totalDays > h3 {
+  text-align: center;
+}
+
+.totalDays > span {
   font-size: large;
   font-weight: bold;
   color: red;

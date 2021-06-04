@@ -1,6 +1,7 @@
 
 //send req to bg for storage value of toggle; if "on" run scripts
 chrome.runtime.sendMessage({toggleReq: "toggle"}, res => {
+    chrome.runtime.sendMessage({date:"date"})
     if (res.toggle==="on"){
         document.addEventListener("DOMSubtreeModified", getCheckout )
         document.addEventListener("DOMContentLoaded", getCheckout )
@@ -18,4 +19,5 @@ function getCheckout(){
             chrome.runtime.sendMessage({count: "count"})
         })
     }
+    
 }
