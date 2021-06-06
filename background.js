@@ -59,7 +59,9 @@ chrome.runtime.onMessage.addListener( async (request, sender, sendResponse) => {
             console.log(storageCache)
             if (!storageCache.hasOwnProperty('count')){
                 const now = (new Date()).toJSON()
-                chrome.storage.local.set({count: 1, date: now})
+                storageCache["count"] = 1
+                storageCache["date"] = now 
+                chrome.storage.local.set(storageCache)
             } else{
                 storageCache["count"]++;
                 chrome.storage.local.set(storageCache, () => {
